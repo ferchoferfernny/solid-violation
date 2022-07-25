@@ -2,9 +2,9 @@ public class Principal {
 
   public static void main(String[] args) {
     Envio[] envios = {
-        new Envio("Municipal",5000),
-        new Envio("Intermunicipal",15000),
-        new Envio("Internacional",25000)
+        new Envio("Municipal",5000,"Tiempo envio 12 horas"),
+        new Envio("Intermunicipal",15000,"Tiempo envio 36 horas"),
+        new Envio("Internacional",25000, "Tiempo envio 90 horas")
     };
     imprimirTiempoDeEnvio(envios);
     imprimirTiempoDeEnvio(envios);
@@ -12,9 +12,7 @@ public class Principal {
 
   public static void imprimirTiempoDeEnvio(Envio[] envios){
     for (Envio coche : envios) {
-      if(coche.tipo.equals("Municipal")) System.out.println("Tiempo envio 12 horas");
-      if(coche.tipo.equals("Intermunicipal")) System.out.println("Tiempo envio 36 horas");
-      if(coche.tipo.equals("Internacional")) System.out.println("Tiempo envio 90 horas");
+      showtiempoenprint ()
     }
   }
 }
