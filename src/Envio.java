@@ -1,11 +1,13 @@
-public class Envio {
+public class Envio implements calculoTiempo  {
 
   String tipo;
   Integer precio;
+  String tiempo;
 
-  Envio(String tipo, Integer precio) {
+  Envio(String tipo, Integer precio, String tiempo) {
     this.tipo = tipo;
     this.precio = precio;
+    this.tiempo = tiempo;
   }
 
   String getTipoEnvio() {
@@ -17,4 +19,10 @@ public class gestionEnvios {
   public void crearTipoEnvio(Envio envio) {
     //Save Envio DB
   }
+  
+@Override
+ public void showtiempoenprint (){
+   System.out.println(this.tiempo)
+ }
+  
 }
